@@ -68,3 +68,10 @@ Most of the training scripts are available in the ```training_scripts``` folder:
 - ```BART Response Generation.ipynb``` was used to train the Response Generator module module.
 
 - ```DialogueDiscourseParser``` and ```Relation Classification``` were used to train the DM module.
+
+
+## Authors
+
++ Alexander Chernyavskiy: [Github](https://github.com/alchernyavskiy)
++ Max Bregeda: [Github](https://github.com/mbregeda)
++ Maria Nikiforova: [Github](https://github.com/benzom)
