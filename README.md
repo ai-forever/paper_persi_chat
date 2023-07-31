@@ -25,6 +25,8 @@ cat requirements.txt | xargs -n 1 pip install --extra-index-url https://download
 
 ```bash
 git lfs install
+```
+```bash
 git clone https://huggingface.co/ai-forever/paper_persi_chat checkpoint
 ```
 
@@ -43,7 +45,10 @@ cp checkpoint/glove.6B.100d.txt chat_scripts/dialogue_discourse_parser/glove/ &&
 Run demo app on localhost:XXXX using     
 
 ```bash
-cd chat_scripts && streamlit run streamlit_demo.py --server.port=XXXX
+cd chat_scripts
+```
+```bash
+streamlit run streamlit_demo.py --server.port=XXXX
 ```
 
 ### Dataset
