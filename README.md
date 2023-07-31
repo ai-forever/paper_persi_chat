@@ -21,7 +21,7 @@ Works only for the Python 3.8 environment.
 cat requirements.txt | xargs -n 1 pip install --extra-index-url https://download.pytorch.org/whl/cu111
 ```
 
-2) Download checkpoints:
+2) Download checkpoints (see [huggingface docs](https://huggingface.co/docs/hub/models-downloading) for more details):
 
 ```bash
 git lfs install
