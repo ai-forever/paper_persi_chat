@@ -4,6 +4,7 @@ import pickle
 import streamlit as st
 from streamlit_chat import message
 from streamlit_searchbox import st_searchbox
+import torch
 
 from scipdf_parser import sci_parse_pdf_article
 
@@ -46,7 +47,8 @@ def load_keywords():
 
 
 def load_pipeline():
-    return PersistentChatBot(version='v2', solve_corefs=True, device='cuda:0')
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    return PersistentChatBot(solve_corefs=True, device=device)
 
 
 class PersistentChatBotStreamlit:
@@ -146,22 +148,22 @@ def main():
     with st.sidebar:
         st.markdown("""---""")
         if select_option ==  'Select from the suggested list':
-            paper = st.selectbox("Paper", titles[47651:48651])
+            paper = st.selectbox("Paper", titles)
             meta = None
         elif select_option ==  'Search in the database':
-            paper = 'Building Language Models for Text with Named Entities'
+            paper = '_Liar, Liar Pants on Fire__ A New Benchmark Dataset for Fake News Detection'
             st.markdown('Enter title keywords separated by spaces to find relevant papers')
             paper = st_searchbox(
                 lambda x: search(x),
                 key="searchbox",
-                default = 'Building Language Models for Text with Named Entities',
+                default = '_Liar, Liar Pants on Fire__ A New Benchmark Dataset for Fake News Detection',
                 clearable=True,
                 clear_on_submit=False
             )
             meta = None
         else:
             st.markdown('This method is in a test mode. Try searching the database first. In addition, it is best to load articles from arXiv.')
-            paper = 'Building Language Models for Text with Named Entities'
+            paper = '_Liar, Liar Pants on Fire__ A New Benchmark Dataset for Fake News Detection'
             meta = None
             in_pdf = st.sidebar.file_uploader('Upload your .pdf file with paper text', type="pdf")
             if in_pdf:

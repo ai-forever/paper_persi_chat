@@ -183,7 +183,7 @@ class PersistentChatBot:
                     response = "I don't have enough information to answer this question."
                 else:
                     history = [el['text'] for el in self.dialogue_history[-3:-1]]
-                    response = self.response_generator.predict(query_from_user, span['text'], grounding['text'], history, version=self.version)
+                    response = self.response_generator.predict(query_from_user, span['text'], grounding['text'], history)
                     response = prefix + response
                 
                 self.dialogue_history.append({'speaker': 'bot', 'text': response})

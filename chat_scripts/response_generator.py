@@ -88,21 +88,12 @@ class ResponseGeneratorBart:
             clean_up_tokenization_spaces=False
         )[0]
         
-        #TODO: log
-        print(text)
-        print(pred)
-        
         return pred
         
-    def predict(self, question, span, grounding, history, version='v1'):
+    def predict(self, question, span, grounding, history):
         history = ' <UTTERSEP> '.join(history)
         history = re.sub(r'\s+', ' ', history)
         span = re.sub(r'\s+', ' ', span)
-        if version == 'v1':
-            gpt_input = ' <SEP> '.join([question, span, grounding, history])
-        elif version == 'v2':
-            gpt_input = ' <SEP> '.join([question, span, '']) #history
-        else:
-            raise Exception('Not known version')
+        gpt_input = ' <SEP> '.join([question, span, '']) #history
         pred = self.generate_top(gpt_input, num_beams=10)
         return pred
