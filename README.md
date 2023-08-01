@@ -42,6 +42,8 @@ cp checkpoint/glove.6B.100d.txt chat_scripts/dialogue_discourse_parser/glove/ &&
 
 ### How to use
 
+1. **Full pipeline**
+
 Run demo app on localhost:XXXX using     
 
 ```bash
@@ -50,6 +52,13 @@ cd chat_scripts
 ```bash
 streamlit run streamlit_demo.py --server.port=XXXX
 ```
+
+2. **Single models** (see also https://huggingface.co/ai-forever/paper_persi_chat)
+
+Three models (***Summarizer***, ***QA module*** and ***Response Generator***) can be imported using *transformers* library after weights downloading.
+
+Inference examples: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1UlFvxj9LEIe_z06NVoKZGtdrQuC9S60b?usp=sharing)
+
 
 ### Dataset
 
