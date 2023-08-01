@@ -5,7 +5,7 @@ This repo contains code for the SigDial 2023 paper: "PaperPersiChat: Scientific 
 
 **Description:**
 
-PaperPersiChat is a chatbot-system designed for the discussion of scientific papers. This system supports summarization and question-answering modes within a single end-to-end chatbot pipeline, which is guided by discourse analysis. To expedite the development of similar systems, we also release the gathered dataset, which has no publicly available analogues.
+PaperPersiChat is a chatbot-system designed for the discussion of scientific papers. **Persi** in the name stands for "persistent", which means the chatbot is document-grounded and uses only the text of the paper under discussion to avoid generative hallucinations. This system supports summarization and question-answering modes within a single end-to-end chatbot pipeline, which is guided by discourse analysis. To expedite the development of similar systems, we also release the gathered dataset, which has no publicly available analogues.
 
 PaperPersiChat is running online on http://www.PaperPersiChat.tech
 
