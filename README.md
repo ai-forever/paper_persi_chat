@@ -1,6 +1,6 @@
 ## PaperPersiChat
 
-This repo contains code for the SigDial 2023 paper: "PaperPersiChat: Scientific Paper Discussion Chatbot using Transformers and Discourse Flow Management"
+This repo contains code for the paper: [PaperPersiChat: Scientific Paper Discussion Chatbot using Transformers and Discourse Flow Management](https://aclanthology.org/2023.sigdial-1.54/)
 
 
 **Description:**
@@ -84,3 +84,23 @@ Most of the training scripts are available in the ```training_scripts``` folder:
 + Alexander Chernyavskiy: [Github](https://github.com/alchernyavskiy)
 + Max Bregeda: [Github](https://github.com/mbregeda)
 + Maria Nikiforova: [Github](https://github.com/benzom)
+
+## Citation
+
+If you find this repository helpful, feel free to cite our publication [PaperPersiChat: Scientific Paper Discussion Chatbot using Transformers and Discourse Flow Management](https://aclanthology.org/2023.sigdial-1.54/):
+```
+@inproceedings{chernyavskiy-etal-2023-paperpersichat,
+    title = "{P}aper{P}ersi{C}hat: Scientific Paper Discussion Chatbot using Transformers and Discourse Flow Management",
+    author = "Chernyavskiy, Alexander  and
+      Bregeda, Max  and
+      Nikiforova, Maria",
+    booktitle = "Proceedings of the 24th Meeting of the Special Interest Group on Discourse and Dialogue",
+    month = sep,
+    year = "2023",
+    address = "Prague, Czechia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.sigdial-1.54",
+    pages = "584--587",
+}
+
+``` 
